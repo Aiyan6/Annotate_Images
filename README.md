@@ -3,9 +3,11 @@ Place all of the images to be annotated in a folder.
 Keep the annotate.py file outside of this folder.
 
 
+
 Run the following commands:
 pip install requirements.txt
 python annotate.py --dir *image_folder*
+
 
 
 Instructions on how to label images
