@@ -5,6 +5,7 @@ Keep the annotate.py file outside of this folder.
 
 
 Run the following commands:
+
 pip install requirements.txt
 
 python annotate.py --dir *image_folder*
