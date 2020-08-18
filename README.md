@@ -16,8 +16,6 @@ A bounding box will already be shown on the image which has to be adjusted furth
 
 Instructions on how to adjust bounding boxes:
 
-A bounding box will already be shown on the image which has to be adjusted further
-
 * Press the j/J,k/K keys to rotate the bounding box
 
 * Press the w/W,a/A,s/S,d/D keys to translate the bounding box
