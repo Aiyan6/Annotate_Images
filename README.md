@@ -1,5 +1,6 @@
 # Annotate_Images
 Place all of the images to be annotated along with their xml labels in a separate directory 
+
 Keep the annotate.py file outside of this directory
 
 
