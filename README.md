@@ -11,8 +11,10 @@ Run the following commands:
 * python annotate.py --dir **image_folder**
 
 
+A bounding box will already be shown on the image which has to be adjusted further
 
-Instructions on how to label images
+
+Instructions on how to adjust bounding boxes:
 
 A bounding box will already be shown on the image which has to be adjusted further
 
