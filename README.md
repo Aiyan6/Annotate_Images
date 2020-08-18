@@ -8,7 +8,7 @@ Run the following commands:
 
 * pip install requirements.txt
 
-* python annotate.py --dir ****image_folder****
+* python annotate.py --dir ***image_folder***
 
 
 A bounding box will already be shown on the image which has to be adjusted further
