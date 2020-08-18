@@ -1,6 +1,6 @@
 # Annotate_Images
-Place all of the images to be annotated in a folder along with their xml labels.
-Keep the annotate.py file outside of this folder.
+Place all of the images to be annotated along with their xml labels in a separate directory 
+Keep the annotate.py file outside of this directory
 
 
 
@@ -8,7 +8,7 @@ Run the following commands:
 
 * pip install requirements.txt
 
-* python annotate.py --dir **image_folder**
+* python annotate.py --dir ****image_folder****
 
 
 A bounding box will already be shown on the image which has to be adjusted further
