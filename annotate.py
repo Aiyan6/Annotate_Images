@@ -65,23 +65,20 @@ def parse(xmlFile):
 
 def convert_theta(theta):
 	if theta<0:
-		theta = (2*math.pi) + theta
-
-	if theta==(math.pi)/2 or theta==(math.pi) or theta==(3*(math.pi))/2 or theta==2*(math.pi):
-		theta = 0
-
-	elif theta>(math.pi)/2 and theta<(math.pi):
-		theta-=(math.pi)/2
-
-	elif theta>(math.pi) and theta<(3*(math.pi))/2:
-		theta-=math.pi
-
-	elif theta>(3*(math.pi))/2 and theta<2*(math.pi):
-		theta-=(3*(math.pi))/2
+		theta = math.pi + theta
 
 	return theta * (180/math.pi)
 
 
+def make_class(theta):
+	rem = theta % 20
+
+	if rem < 10:
+		theta = int((theta / 10 * 10) - rem)
+	else:
+		theta = (int((theta + 10) / 10) * 10)
+
+	return theta
 
 
 
@@ -140,6 +137,14 @@ for i in label_names:
 
 image_names = filtered_image_names
 label_names = filtered_label_names
+
+for i in range(len(image_names)-1):
+	if (image_names[i])[0:len(image_names[i])-6] == (image_names[i+1])[0:len(image_names[i+1])-6]:
+		print('yes')
+
+
+print(len(image_names))
+print(len(label_names))
 
 tuples = []
 
@@ -674,7 +679,11 @@ for img,anno in tuples:
 				temp = image.copy()
 				theta = convert_theta(theta)
 				print(theta)
-				z = [center[0]/width, center[1]/height, w/width, h/height, theta]
+				c = make_class(theta)
+				class_label = int(((c-20)/20)+1)
+				if class_label>8:
+					class_label = 0
+				z = [class_label, center[0]/width, center[1]/height, w/width, h/height]
 				info.append(z)
                 
 				if length>1:
